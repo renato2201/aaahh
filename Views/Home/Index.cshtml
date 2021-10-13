@@ -1,0 +1,37 @@
+﻿@model List<Prueba>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<body class="bg-success">
+    <div class="text-center">
+    <h1 class="display-4">LISTA DE REGISTROS</h1>
+    @if (Model.Count == 0)
+    {
+        <p class="mt-5">Buenas tardes , aún no hay solicitudes registradas.
+            Por favor registre una solicitud</p>
+    }
+</div>
+
+
+    <div class="row mt-5">
+        @foreach (var p in Model)
+        {
+            <div class="col-4">
+                <img src="@p.Foto" alt="" width="150 px" height="150px">
+                <p>
+                    Nombre del Producto: @p.NombreProducto <br>
+                    Descripcion: @p.Descripcion <br>
+                    Precio: S/.@p.Precio <br>
+                    Celular de Contacto: @p.Celular <br>
+                    Lugar: @p.Lugar<br>
+                    Comprador: @p.Nombre<br>
+                    Categoria: @p.Categoria <br>
+                </p>
+            </div>
+        }
+
+
+    </div>
+
+</body>
+

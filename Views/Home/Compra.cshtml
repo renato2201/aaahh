@@ -1,0 +1,53 @@
+@model Prueba
+@{
+    ViewData["Title"] = "Compra";
+}
+<h1>Registrar Producto</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label >Nombre del Producto</label>
+        <input asp-for="NombreProducto" class="form-control">
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Foto" ></label>
+        <input asp-for="Foto" class="form-control">
+        <span asp-validation-for="Foto" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Descripcion" ></label>
+        <textarea asp-for="Descripcion" class="form-control"></textarea>
+        <span asp-validation-for="Descripcion" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Precio" ></label>
+        <input asp-for="Precio" class="form-control">
+        <span asp-validation-for="Precio" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Celular" ></label>
+        <input asp-for="Celular" class="form-control">
+        <span asp-validation-for="Celular" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Lugar" ></label>
+        <input asp-for="Lugar" class="form-control">
+        <span asp-validation-for="Lugar" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Nombre" ></label>
+        <input asp-for="Nombre" class="form-control">
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+    <div class="form-group"> 
+    <label asp-for="Categoria"></label><br>
+    <select asp-for="Categoria">
+            <option value="Tecnologia">Tecnología</option>
+            <option value="Arte">Arte</option>
+            <option value ="Ropa">Ropa</option>
+            <option value="Muebles">Muebles</option>
+    </select>
+    </div>
+    <button class="btn btn-primary">Enviar</button>
+</form>
